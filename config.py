@@ -1,7 +1,15 @@
+import os
+
 import torch
 from petals.constants import PUBLIC_INITIAL_PEERS
 
 from data_structures import ModelBackendConfig, ModelChatConfig, ModelConfig, ModelFrontendConfig
+
+INITIAL_PEERS = os.getenv("INITIAL_PEERS", None)
+if INITIAL_PEERS is not None:
+    INITIAL_PEERS = INITIAL_PEERS.split(":")
+else:
+    INITIAL_PEERS = PUBLIC_INITIAL_PEERS
 
 default_chat_config = ModelChatConfig(
     max_session_length=8192,
