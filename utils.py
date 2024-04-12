@@ -21,7 +21,7 @@ def load_models() -> Dict[str, Tuple[PreTrainedModel, PreTrainedTokenizer, Model
             tokenizer = AutoTokenizer.from_pretrained(backend_config.repository, add_bos_token=False, use_fast=False)
 
             logger.info(
-                f"Loading model {backend_config.repository} with adapter {backend_config.adapter} in {config.TORCH_DTYPE}"
+                f"Loading model {backend_config.repository} with adapter {backend_config.adapter} in {config.TORCH_DTYPE} with {config.INITIAL_PEERS}"
             )
             # We set use_fast=False since LlamaTokenizerFast takes a long time to init
             model = AutoDistributedModelForCausalLM.from_pretrained(

@@ -10,7 +10,7 @@ if INITIAL_PEERS is not None:
     INITIAL_PEERS = INITIAL_PEERS.split(":")
 else:
     INITIAL_PEERS = PUBLIC_INITIAL_PEERS
-
+print("INITIAL_PEERS",INITIAL_PEERS)
 default_chat_config = ModelChatConfig(
     max_session_length=8192,
     sep_token="###",
@@ -95,10 +95,6 @@ MODEL_FAMILIES = {
     #     ),
     # ],
 }
-
-INITIAL_PEERS = PUBLIC_INITIAL_PEERS
-# Set this to a list of multiaddrs to connect to a private swarm instead of the public one, for example:
-# INITIAL_PEERS = ['/ip4/10.1.2.3/tcp/31234/p2p/QmcXhze98AcgGQDDYna23s4Jho96n8wkwLJv78vxtFNq44']
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
