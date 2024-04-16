@@ -1,0 +1,3 @@
+FROM h4ckermike/inference.petals:main
+WORKDIR /usr/src/app/
+ADD config.py /usr/src/app/

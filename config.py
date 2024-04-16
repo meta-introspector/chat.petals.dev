@@ -30,15 +30,15 @@ MODEL_FAMILIES = {
             ),
             default_chat_config,
         ),
-        # ModelConfig(
-        #     ModelBackendConfig(repository="meta-llama/Llama-2-70b-chat-hf"),
-        #     ModelFrontendConfig(
-        #         name="Llama 2 (70B-Chat)",
-        #         model_card="https://huggingface.co/meta-llama/Llama-2-70b-chat-hf",
-        #         license="https://bit.ly/llama2-license",
-        #     ),
-        #     default_chat_config,
-        # ),
+        ModelConfig(
+            ModelBackendConfig(repository="Maykeye/TinyLLama-v0"),
+            ModelFrontendConfig(
+                name="TinyLlama-v0",
+                model_card="https://huggingface.co/Maykeye/TinyLLama-v0",
+                license="https://choosealicense.com/licenses/apache-2.0",
+            ),
+            default_chat_config,
+        ),
     ],
     # "Falcon": [
     #     ModelConfig(
