@@ -30,15 +30,15 @@ MODEL_FAMILIES = {
         #     ),
         #     default_chat_config,
         # ),
-        ModelConfig(
-            ModelBackendConfig(repository="Maykeye/TinyLLama-v0"),
-            ModelFrontendConfig(
-                name="TinyLlama-v0",
-                model_card="https://huggingface.co/Maykeye/TinyLLama-v0",
-                license="https://choosealicense.com/licenses/apache-2.0",
-            ),
-            default_chat_config,
-        ),
+        # ModelConfig(
+        #     ModelBackendConfig(repository="Maykeye/TinyLLama-v0"),
+        #     ModelFrontendConfig(
+        #         name="TinyLlama-v0",
+        #         model_card="https://huggingface.co/Maykeye/TinyLLama-v0",
+        #         license="https://choosealicense.com/licenses/apache-2.0",
+        #     ),
+        #     default_chat_config,
+        # ),
         ModelConfig(
              ModelBackendConfig(repository="SanjiWatsuki/TinyMixtral-32x248M"),
              ModelFrontendConfig(

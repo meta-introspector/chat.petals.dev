@@ -1,5 +1,6 @@
-#git+https://github.com/meta-introspector/petals
+git+https://github.com/meta-introspector/petals
 Flask
 flask-sock
 flask-cors
 gunicorn[gthread]
+#git+https://github.com/huggingface/transformers
