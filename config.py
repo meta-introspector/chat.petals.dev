@@ -39,6 +39,15 @@ MODEL_FAMILIES = {
             ),
             default_chat_config,
         ),
+        # ModelConfig(
+        #     ModelBackendConfig(repository="SanjiWatsuki/TinyMixtral-32x248M"),
+        #     ModelFrontendConfig(
+        #         name="TinyMixtral-32x248M",
+        #         model_card="https://huggingface.co/SanjiWatsuki/TinyMixtral-32x248M",
+        #         license="https://choosealicense.com/licenses/apache-2.0",
+        #     ),
+        #     default_chat_config,
+        # ),
     ],
     # "Falcon": [
     #     ModelConfig(
