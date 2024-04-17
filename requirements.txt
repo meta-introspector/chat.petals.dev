@@ -1,4 +1,4 @@
-git+https://github.com/bigscience-workshop/petals
+#git+https://github.com/meta-introspector/petals
 Flask
 flask-sock
 flask-cors

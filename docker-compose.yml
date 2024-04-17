@@ -1,0 +1,21 @@
+services:
+
+  inference   :
+#    profiles: ["core"]
+    restart: always
+#    depends_on:
+#      - backbone
+    environment:
+      - INITIAL_PEERS=${INITIAL_PEERS}
+
+    image: h4ckermike/inference.petals:main
+    #    image: petals-inference-test
+    build: .
+    ports:
+      - "8010:5000"
+
+    command: gunicorn app:app --bind 0.0.0.0:5000 --worker-class gthread --threads 100 --timeout 1000
+
+
+volumes:
+  petals-cache-backbone:
