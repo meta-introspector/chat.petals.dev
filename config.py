@@ -21,6 +21,7 @@ default_chat_config = ModelChatConfig(
 
 MODEL_FAMILIES = {
     "Llama 2": [
+
         ModelConfig(
             ModelBackendConfig(repository
 ="VAGOsolutions/SauerkrautLM-Mixtral-8x7B
@@ -64,6 +65,35 @@ icense.com/licenses/apache-2.0",
         #      ),
         #      default_chat_config,
         # ),
+
+        # ModelConfig(
+        #     ModelBackendConfig(repository="petals-team/StableBeluga2", aliases=["stabilityai/StableBeluga2"]),
+        #     ModelFrontendConfig(
+        #         name="Stable Beluga 2 (70B)",
+        #         model_card="https://huggingface.co/stabilityai/StableBeluga2",
+        #         license="https://huggingface.co/stabilityai/StableBeluga2/blob/main/LICENSE.txt",
+        #     ),
+        #     default_chat_config,
+        # ),
+        ModelConfig(
+            ModelBackendConfig(repository="Maykeye/TinyLLama-v0"),
+            ModelFrontendConfig(
+                name="TinyLlama-v0",
+                model_card="https://huggingface.co/Maykeye/TinyLLama-v0",
+                license="https://choosealicense.com/licenses/apache-2.0",
+            ),
+            default_chat_config,
+        ),
+        ModelConfig(
+            ModelBackendConfig(repository="SanjiWatsuki/TinyMixtral-32x248M"),
+            ModelFrontendConfig(
+                name="TinyMixtral-32x248M",
+                model_card="https://huggingface.co/SanjiWatsuki/TinyMixtral-32x248M",
+                license="https://choosealicense.com/licenses/apache-2.0",
+            ),
+            default_chat_config,
+        ),
+
     ],
     # "Falcon": [
     #     ModelConfig(

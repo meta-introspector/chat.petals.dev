@@ -1,9 +1,6 @@
-FROM python:3.10-slim-bullseye
-
-RUN apt update && apt install -y libopenblas-dev ninja-build build-essential wget git
-RUN python -m pip install --upgrade pip pytest cmake scikit-build setuptools
-
+FROM h4ckermike/inference.petals:main
 WORKDIR /usr/src/app/
+
 
 ADD pip.freeze petals/pip.freeze
 RUN pip install --no-cache-dir -r petals/pip.freeze
@@ -17,6 +14,12 @@ RUN pip install --no-cache-dir -r ./requirements.txt --upgrade pip
 
 
 #RUN transformers==4.38.2
-ADD . /usr/src/app/
+#ADD . /usr/src/app/
+
+
+#pip install git+https://github.com/huggingface/transformers
+ADD config.py /usr/src/app/
+ADD  utils.py /usr/src/app/
+
 
 CMD gunicorn app:app --bind 0.0.0.0:5000 --worker-class gthread --threads 100 --timeout 1000
